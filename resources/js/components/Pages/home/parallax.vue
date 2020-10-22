@@ -3,7 +3,7 @@
   <div>
 
         
-<iframe width="100%" height="20" scrolling="no" frameborder="no" allow="autoplay"  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/888640198%3Fsecret_token%3Ds-Pt1YFeHORcB&color=%23000000&inverse=false&auto_play=true&show_user=false"></iframe>
+<iframe width="100%" height="20" scrolling="no" frameborder="no" allow=""  ></iframe>
 <div id="a">
 <!-- <a href="https://soundcloud.com/ascendedvolumes" title="RYZN SHYN"></a>
 <a href="https://soundcloud.com/ascendedvolumes/fantasia/s-Pt1YFeHORcB" title="fantasia" target="_blank" >

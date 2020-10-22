@@ -5,7 +5,12 @@ Vue.use(Router)
 
 
 //project pages
-import home from './components/Pages/home/home.vue'
+import home from './components/home.vue'
+import about from './components/Pages/about.vue'
+import services from './components/Pages/services.vue'
+import contacts from './components/Pages/contact.vue'
+import FAQ from './components/Pages/faq.vue'
+
 
 const routes=[
     //project routes
@@ -19,6 +24,31 @@ const routes=[
         path:'/',
         component:home,
     },
+
+    {
+
+        path:'/about',
+        component:about,
+    },
+
+    {
+
+        path:'/services',
+        component:services,
+    },
+    {
+
+        path:'/contact',
+        component:contacts,
+    },
+    {
+
+        path:'/faq',
+        component:FAQ,
+    },
+
+
+
 
     
 

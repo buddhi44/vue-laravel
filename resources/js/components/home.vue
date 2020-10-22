@@ -22,16 +22,16 @@
                 <header>
                     <nav class="nav-wrapper transparent">
                     <div class="container">
-                        <a href="#" class="brand-logo">Photo Ninja</a>
+                        <a href="#" class="brand-logo"> <i class="small material-icons">insert_chart<img src="./Pages/home/img/kraken.png" alt></i></a>
                         <a href="#" class="sidenav-trigger" data-target="mobile-menu">
                         <i class="material-icons">menu</i>
                         </a>
                         <ul class="right hide-on-med-and-down">
-                        <li><a href="#photos">Home</a></li>
-                        <li><a href="#services">About us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#contact">Services</a></li>
-                        <li><a href="#contact">FAQ</a></li>
+                        <li><router-link to="">Home</router-link></li>
+                        <li><router-link to="/about">About us</router-link></li>
+                        <li><router-link to="/contact">contact</router-link></li>
+                        <li><router-link to="/services">Services</router-link></li>
+                        <li><router-link to="/faq">FAQ</router-link></li>
                         <li><a href="#" class="tooltipped btn-floating btn-small indigo darken-4" data-position="bottom" data-tooltip="Instagram"> 
                             <i class="fab fa-instagram"></i>
                         </a></li>
@@ -43,11 +43,11 @@
                         </a></li>
                         </ul>
                         <ul class="sidenav grey lighten-2" id="mobile-menu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">FAQ</a></li>
+                        <li><router-link to="">Home</router-link></li>
+                        <li><router-link to="/about">About us</router-link></li>
+                        <li><router-link to="/contact">contact</router-link></li>
+                        <li><router-link to="/services.vue">Services</router-link></li>
+                        <li><router-link to="/faq">FAQ</router-link></li>
                         </ul>
                     </div>
                     </nav>
@@ -57,7 +57,7 @@
                 <section class="container section scrollspy" id="photos">
                     <div class="row">
                     <div class="col s12 l4">
-                        <img src="./img/portrait.jpg" alt="" class="responsive-img materialboxed">
+                        <img src="./Pages/home/img/portrait.jpg" alt="" class="responsive-img materialboxed">
                     </div>
                     <div class="col s12 l6 offset-l1">
                         <h2 class="indigo-text text-darken-4">Portraits</h2>
@@ -66,7 +66,7 @@
                     </div>
                     <div class="row">
                             <div class="col s12 l4 offset-l1 push-l7">
-                                <img src="./img/city.jpg" alt="" class="responsive-img materialboxed">
+                                <img src="./Pages/home/img/city.jpg" alt="" class="responsive-img materialboxed">
                             </div>
                             <div class="col s12 l6 offset-l1 pull-l5 right-align">
                                 <h2 class="indigo-text text-darken-4">Cityscapes</h2>
@@ -75,7 +75,7 @@
                     </div>
                     <div class="row">
                             <div class="col s12 l4">
-                                <img src="./img/nature.jpg" alt="" class="responsive-img materialboxed">
+                                <img src="./Pages/home/img/nature.jpg" alt="" class="responsive-img materialboxed">
                             </div>
                             
                             <div class="col s12 l6 offset-l1">
@@ -205,9 +205,7 @@
                              
                          </div>
 
-                         <div class="footer-copyright grey darken-4">
-                                    <div class="container center-align">&copy; 2018 Photo Ninja</div>
-                        </div>
+                                <Footer/>
                      </footer>
 
             
@@ -222,14 +220,16 @@
 
 <script>
 
-import Parallax from './parallax'
+import Parallax from './Pages/home/parallax'
+import Footer from './footer'
+
 export default {
-    components:{Parallax}
+    components:{Parallax,Footer}
 }
 </script>
 
 <style scoped>
-    @import './home.css'
+    @import './Pages/home/home.css';
 
 </style>
 
