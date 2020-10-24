@@ -8,7 +8,12 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
+      name: 'Home',
       path: '/',
+      component: () => import('@/Home'),
+    },
+    {
+      path: '/agent',
       component: () => import('@/views/dashboard/Index'),
       children: [
         // Dashboard
