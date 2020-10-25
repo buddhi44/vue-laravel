@@ -28,7 +28,7 @@
                         <li><router-link to="">Home</router-link></li>
                         <li><router-link to="/about">About us</router-link></li>
                         <li><router-link to="/contact">contact</router-link></li>
-                        <li><router-link to="/services.vue">Services</router-link></li>
+                        <li><router-link to="/services">Services</router-link></li>
                         <li><router-link to="/faq">FAQ</router-link></li>
                         </ul>
                     </div>
@@ -203,10 +203,12 @@
 <script>
 
 import Parallax from './views/Home/parallax'
-import Footer from './views/dashboard/components/core/Footer'
-
+import Footer from './views/agentDashboard/components/core/Footer'
 export default {
-    components:{Parallax,Footer}
+     
+    components:{Parallax,Footer},
+
+   
 }
 </script>
 
