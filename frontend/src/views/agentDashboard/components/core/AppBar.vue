@@ -57,11 +57,11 @@
       class="ml-2"
       min-width="0"
       text
-      to="/"
+      to="/agent"
     >
       <v-icon>mdi-view-dashboard</v-icon>
     </v-btn>
-
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <v-menu
       bottom
       left
@@ -105,15 +105,57 @@
         </div>
       </v-list>
     </v-menu>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+         <v-menu
+          bottom
+          left
+          offset-y
+          origin="top right"
+          transition="scale-transition"
+        >
+        <template v-slot:activator="{ attrs, on }">
+        <v-btn
+          class="ml-2"
+          min-width="0"
+          text
+          v-bind="attrs"
+          v-on="on"
+        >
+          <v-badge>
+            <v-icon>mdi-account</v-icon>
+          </v-badge>
+        </v-btn>
+      </template>
 
-    <v-btn
+      <v-list
+      
+      >
+        <div>
+          <app-bar-item>
+            <ul>
+             <li>
+                <a
+                v-if="isLoggedIn"
+                @click.prevent="logout"
+                href="#">
+                  Logout
+              </a>
+              </li>
+            </ul>
+          </app-bar-item>
+        </div>
+      </v-list>
+    </v-menu>
+    
+
+    <!-- <v-btn
       class="ml-2"
       min-width="0"
       text
-      to="/pages/user"
+      to="/agent/pages/user"
     >
       <v-icon>mdi-account</v-icon>
-    </v-btn>
+    </v-btn> -->
   </v-app-bar>
 </template>
 
@@ -123,6 +165,8 @@
 
   // Utilities
   import { mapState, mapMutations } from 'vuex'
+
+  import User from '../../../log/api/user'
 
   export default {
     name: 'DashboardCoreAppBar',
@@ -161,6 +205,10 @@
     },
 
     data: () => ({
+
+      
+      isLoggedIn: false,
+   
       notifications: [
         'Mike John Responded to your email',
         'You have 5 new tasks',
@@ -168,6 +216,9 @@
         'Another Notification',
         'Another one',
       ],
+
+       
+
     }),
 
     computed: {
@@ -178,6 +229,21 @@
       ...mapMutations({
         setDrawer: 'SET_DRAWER',
       }),
+
+      logout() {
+      User.logout().then(() => {
+        localStorage.removeItem("auth");
+        this.isLoggedIn = false;
+        this.$router.push({ name: "Home" });
+      });
+    }
     },
+
+     mounted() {
+    this.$root.$on("login", () => {
+      this.isLoggedIn = true;
+    });
+    this.isLoggedIn = !!localStorage.getItem("auth");
+  },
   }
 </script>

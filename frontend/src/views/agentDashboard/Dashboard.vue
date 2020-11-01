@@ -4,262 +4,157 @@
     fluid
     tag="section"
   >
-    <v-row>
+          
+                                <v-row>
+      <!--  -->
+                                        
+                                        <v-col
+                                          cols="12"
+                                          md="12"
+                                        >
+                                            
+                                          <base-material-card
+                                            
+                                            color="pink"
+                                            class="px-5 py-auto "
+                                          >
+                                          
+                                          <div class="row pl-6 ">
+                                              <div class="col-lg-3 col-xs-6">
+                                                <div class="rad-info-box rad-txt-success">
+                                                  <i class="fa fa-windows"></i>
+                                                  <span class="heading">Microsoft</span>
+                                                
+                                                </div>
+                                              </div>
+                                              <div class="col-lg-3 col-xs-6">
+                                                <div class="rad-info-box rad-txt-primary">
+                                                  <i class="fa fa-facebook"></i>
+                                                  <span class="heading">Facebook</span>
+                                                  
+                                                </div>
+                                              </div>
+                                              <div class="col-lg-3 col-xs-6">
+                                                <div class="rad-info-box rad-txt-danger">
+                                                  <i class="fa fa-google-plus"></i>
+                                                  <span class="heading">Google</span>
+                                                  
+                                                </div>
+                                              </div>
+                                              <div class="col-lg-3 col-xs-6">
+                                                <div class="rad-info-box">
+                                                  <i class="fa fa-apple"></i>
+                                                  <span class="heading"></span>
+                                                  
+                                                </div>
+                                              </div>
+                                             
+                                            </div>
+                                          <v-content class='py-16 mx-5 green accent-2'>
+                                            <animation />
+                                          </v-content>
+                                          
+                                          </base-material-card>
+                                            
+                                            
+                                        </v-col>
+
+                                         
+
+                                       
+
+                                        <!-- <v-col
+                                          cols="12"
+                                          md="6"
+                                        >
+                                          <base-material-card class="px-5 py-3">
+                                            
+                                          </base-material-card>
+                                        </v-col> -->
+
+    <!-- cards ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    
       <v-col
         cols="12"
+        sm="8"
         lg="4"
-      >
-        <base-material-chart-card
-          :data="emailsSubscriptionChart.data"
-          :options="emailsSubscriptionChart.options"
-          :responsive-options="emailsSubscriptionChart.responsiveOptions"
-          color="#E91E63"
-          hover-reveal
-          type="Bar"
-        >
-          <template v-slot:reveal-actions>
-            <v-tooltip bottom>
-              <template v-slot:activator="{ attrs, on }">
-                <v-btn
-                  v-bind="attrs"
-                  color="info"
-                  icon
-                  v-on="on"
-                >
-                  <v-icon
-                    color="info"
-                  >
-                    mdi-refresh
-                  </v-icon>
-                </v-btn>
-              </template>
-
-              <span>Refresh</span>
-            </v-tooltip>
-
-            <v-tooltip bottom>
-              <template v-slot:activator="{ attrs, on }">
-                <v-btn
-                  v-bind="attrs"
-                  light
-                  icon
-                  v-on="on"
-                >
-                  <v-icon>mdi-pencil</v-icon>
-                </v-btn>
-              </template>
-
-              <span>Change Date</span>
-            </v-tooltip>
-          </template>
-
-          <h4 class="card-title font-weight-light mt-2 ml-2">
-            Website Views
-          </h4>
-
-          <p class="d-inline-flex font-weight-light ml-2 mt-1">
-            Last Campaign Performance
-          </p>
-
-          <template v-slot:actions>
-            <v-icon
-              class="mr-1"
-              small
-            >
-              mdi-clock-outline
-            </v-icon>
-            <span class="caption grey--text font-weight-light">updated 10 minutes ago</span>
-          </template>
-        </base-material-chart-card>
-      </v-col>
-
-      <v-col
-        cols="12"
-        lg="4"
-      >
-        <base-material-chart-card
-          :data="dailySalesChart.data"
-          :options="dailySalesChart.options"
-          color="success"
-          hover-reveal
-          type="Line"
-        >
-          <template v-slot:reveal-actions>
-            <v-tooltip bottom>
-              <template v-slot:activator="{ attrs, on }">
-                <v-btn
-                  v-bind="attrs"
-                  color="info"
-                  icon
-                  v-on="on"
-                >
-                  <v-icon
-                    color="info"
-                  >
-                    mdi-refresh
-                  </v-icon>
-                </v-btn>
-              </template>
-
-              <span>Refresh</span>
-            </v-tooltip>
-
-            <v-tooltip bottom>
-              <template v-slot:activator="{ attrs, on }">
-                <v-btn
-                  v-bind="attrs"
-                  light
-                  icon
-                  v-on="on"
-                >
-                  <v-icon>mdi-pencil</v-icon>
-                </v-btn>
-              </template>
-
-              <span>Change Date</span>
-            </v-tooltip>
-          </template>
-
-          <h4 class="card-title font-weight-light mt-2 ml-2">
-            Daily Sales
-          </h4>
-
-          <p class="d-inline-flex font-weight-light ml-2 mt-1">
-            <v-icon
-              color="green"
-              small
-            >
-              mdi-arrow-up
-            </v-icon>
-            <span class="green--text">55%</span>&nbsp;
-            increase in today's sales
-          </p>
-
-          <template v-slot:actions>
-            <v-icon
-              class="mr-1"
-              small
-            >
-              mdi-clock-outline
-            </v-icon>
-            <span class="caption grey--text font-weight-light">updated 4 minutes ago</span>
-          </template>
-        </base-material-chart-card>
-      </v-col>
-
-      <v-col
-        cols="12"
-        lg="4"
-      >
-        <base-material-chart-card
-          :data="dataCompletedTasksChart.data"
-          :options="dataCompletedTasksChart.options"
-          hover-reveal
-          color="info"
-          type="Line"
-        >
-          <template v-slot:reveal-actions>
-            <v-tooltip bottom>
-              <template v-slot:activator="{ attrs, on }">
-                <v-btn
-                  v-bind="attrs"
-                  color="info"
-                  icon
-                  v-on="on"
-                >
-                  <v-icon
-                    color="info"
-                  >
-                    mdi-refresh
-                  </v-icon>
-                </v-btn>
-              </template>
-
-              <span>Refresh</span>
-            </v-tooltip>
-
-            <v-tooltip bottom>
-              <template v-slot:activator="{ attrs, on }">
-                <v-btn
-                  v-bind="attrs"
-                  light
-                  icon
-                  v-on="on"
-                >
-                  <v-icon>mdi-pencil</v-icon>
-                </v-btn>
-              </template>
-
-              <span>Change Date</span>
-            </v-tooltip>
-          </template>
-
-          <h3 class="card-title font-weight-light mt-2 ml-2">
-            Completed Tasks
-          </h3>
-
-          <p class="d-inline-flex font-weight-light ml-2 mt-1">
-            Last Last Campaign Performance
-          </p>
-
-          <template v-slot:actions>
-            <v-icon
-              class="mr-1"
-              small
-            >
-              mdi-clock-outline
-            </v-icon>
-            <span class="caption grey--text font-weight-light">campaign sent 26 minutes ago</span>
-          </template>
-        </base-material-chart-card>
-      </v-col>
-
-      <v-col
-        cols="12"
-        sm="6"
-        lg="3"
+        
       >
         <base-material-stats-card
-          color="info"
-          icon="mdi-twitter"
-          title="Followers"
-          value="+245"
-          sub-icon="mdi-clock"
-          sub-text="Just Updated"
-        />
-      </v-col>
-
-      <v-col
-        cols="12"
-        sm="6"
-        lg="3"
-      >
-        <base-material-stats-card
-          color="primary"
-          icon="mdi-poll"
-          title="Website Visits"
-          value="75.521"
-          sub-icon="mdi-tag"
-          sub-text="Tracked from Google Analytics"
-        />
-      </v-col>
-
-      <v-col
-        cols="12"
-        sm="6"
-        lg="3"
-      >
-        <base-material-stats-card
-          color="success"
+          color="red"
           icon="mdi-store"
-          title="Revenue"
-          value="$ 34,245"
-          sub-icon="mdi-calendar"
-          sub-text="Last 24 Hours"
+          title="Find Shops"
+          value="+245"
+          sub-icon="mdi-cart-arrow-up"
+          sub-text="Just Updated"
+          to='agent/maps/google-maps'
         />
       </v-col>
 
       <v-col
+        cols="12"
+        sm="8"
+        lg="4"
+      >
+        <base-material-stats-card
+          color="success"
+          icon="mdi-tools"
+          title="Find Garages"
+          value="+75"
+          sub-icon="mdi-toolbox"
+          sub-text="search nearest Garages"
+          to='agent/maps/google-maps'
+        />
+      </v-col>
+
+      <v-col
+        cols="12"
+        sm="8"
+        lg="4"
+      >
+        <base-material-stats-card
+          color="info"
+          icon="mdi-history"
+          title="Search Driver History"
+          value="+"
+          sub-icon="mdi-calendar"
+          sub-text="search driver history"
+        />
+      </v-col>
+
+      
+   
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+
+<!-- section2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+                                        <v-col
+                                          cols="12"
+                                          md="6"
+                                        >
+                                          <base-material-card
+                                            color="warning"
+                                            class="px-5 py-3"
+                                          >
+                                              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam sapiente 
+                                                architecto totam qui. Obcaecati consequatur nam vero, nostrum eveniet deserunt 
+                                                quo quasi similique et nobis expedita, delectus laborum hic exercitationem.</p>
+                                          </base-material-card>
+                                        </v-col>
+
+                                        <v-col
+                                          cols="12"
+                                          md="6"
+                                        >
+                                          <base-material-card class="px-5 py-3">
+                                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam sapiente 
+                                                architecto totam qui. Obcaecati consequatur nam vero, nostrum eveniet deserunt 
+                                                quo quasi similique et nobis expedita, delectus laborum hic exercitationem.</p>
+                                          </base-material-card>
+                                        </v-col>
+
+      <!-- <v-col
         cols="12"
         sm="6"
         lg="3"
@@ -273,7 +168,7 @@
           sub-icon-color="red"
           sub-text="Get More Space..."
         />
-      </v-col>
+      </v-col> -->
 
       <v-col
         cols="12"
@@ -388,18 +283,48 @@
           </v-tabs-items>
         </base-material-card>
       </v-col>
+
+                                        <v-col
+                                          cols="12"
+                                          md="6"
+                                        >
+                                          <base-material-card
+                                            color="warning"
+                                            class="px-5 py-3"
+                                          >
+                                            
+                                          </base-material-card>
+                                      </v-col>
+
+                                        <v-col
+                                          cols="12"
+                                          md="6"
+                                        >
+                                         
+                                          <base-material-card >
+                                            
+                                          </base-material-card>
+                                          
+                                        </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
+  import animation from './component/animation/animation ' 
+  import User from '../log/api/user'
   export default {
-    name: 'Dashboard',
 
+    name: 'Dashboard',
+     components:{animation},
     data () {
       return {
+       
+         user:null,
+       
         dailySalesChart: {
           data: {
+           
             labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
             series: [
               [12, 17, 7, 17, 23, 18, 38],
@@ -597,5 +522,16 @@
         this.list[index] = !this.list[index]
       },
     },
+
+    mounted(){
+
+      User.auth().then(response=>{
+        console.log(response);
+      });
+    }
+
+    
   }
 </script>
+
+

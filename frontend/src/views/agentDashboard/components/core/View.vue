@@ -7,11 +7,13 @@
 </template>
 
 <script>
+import appbar from './AppBar' 
   export default {
     name: 'DashboardCoreView',
 
     components: {
       DashboardCoreFooter: () => import('./Footer'),
+    
     },
   }
 </script>
